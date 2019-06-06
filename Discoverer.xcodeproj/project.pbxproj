@@ -56,13 +56,11 @@
 		A1F63D3022A95AA500622F70 /* Discoverer */ = {
 			isa = PBXGroup;
 			children = (
-				A1F63D3122A95AA500622F70 /* AppDelegate.swift */,
-				A1F63D3322A95AA500622F70 /* SceneDelegate.swift */,
-				A1F63D3522A95AA500622F70 /* ContentView.swift */,
-				A1F63D3722A95AA600622F70 /* Assets.xcassets */,
-				A1F63D3C22A95AA600622F70 /* LaunchScreen.storyboard */,
-				A1F63D3F22A95AA600622F70 /* Info.plist */,
+				A1F63D4622A95BA600622F70 /* Models */,
 				A1F63D3922A95AA600622F70 /* Preview Content */,
+				A1F63D4822A95BCB00622F70 /* Resources */,
+				A1F63D4722A95BAF00622F70 /* Utils */,
+				A1F63D4522A95B9800622F70 /* Views */,
 			);
 			path = Discoverer;
 			sourceTree = "<group>";
@@ -73,6 +71,40 @@
 				A1F63D3A22A95AA600622F70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1F63D4522A95B9800622F70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1F63D3522A95AA500622F70 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1F63D4622A95BA600622F70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1F63D4722A95BAF00622F70 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A1F63D3C22A95AA600622F70 /* LaunchScreen.storyboard */,
+				A1F63D3322A95AA500622F70 /* SceneDelegate.swift */,
+				A1F63D3F22A95AA600622F70 /* Info.plist */,
+				A1F63D3122A95AA500622F70 /* AppDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A1F63D4822A95BCB00622F70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1F63D3722A95AA600622F70 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "Discoverer/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Discoverer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Discoverer/Utils/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "Discoverer/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Discoverer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Discoverer/Utils/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
