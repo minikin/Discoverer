@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B36BC0B22BBBADD00F4AE32 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B36BC0A22BBBADD00F4AE32 /* SimpleButton.swift */; };
+		8B36BC0B22BBBADD00F4AE32 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B36BC0A22BBBADD00F4AE32 /* FilledButton.swift */; };
 		8B7AF34122BBA24500618DFD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7AF34022BBA24500618DFD /* LoginView.swift */; };
 		A1B877E222A95E2E005A8871 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B877E122A95E2E005A8871 /* HomeView.swift */; };
 		A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3122A95AA500622F70 /* AppDelegate.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B36BC0A22BBBADD00F4AE32 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
+		8B36BC0A22BBBADD00F4AE32 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
 		8B7AF34022BBA24500618DFD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A1B877E122A95E2E005A8871 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1F63D2E22A95AA500622F70 /* Discoverer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discoverer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +97,7 @@
 			children = (
 				A1B877E122A95E2E005A8871 /* HomeView.swift */,
 				8B7AF34022BBA24500618DFD /* LoginView.swift */,
-				8B36BC0A22BBBADD00F4AE32 /* SimpleButton.swift */,
+				8B36BC0A22BBBADD00F4AE32 /* FilledButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				A1B877E222A95E2E005A8871 /* HomeView.swift in Sources */,
 				8B7AF34122BBA24500618DFD /* LoginView.swift in Sources */,
 				A1F63D3422A95AA500622F70 /* SceneDelegate.swift in Sources */,
-				8B36BC0B22BBBADD00F4AE32 /* SimpleButton.swift in Sources */,
+				8B36BC0B22BBBADD00F4AE32 /* FilledButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

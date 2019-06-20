@@ -20,22 +20,37 @@ struct LoginView: View {
 
             VStack {
                 VStack {
-                    Group {
-                        TextField($nickName, placeholder: Text("Nickname"))
-                            .background(Color.gray)
-                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+									
+                    HStack {
+											
+                        Group {
+													Image(systemName: "flame")
+														.padding(.leading)
+														.foregroundColor(Color.gray)
+                            TextField($nickName, placeholder: Text("Nickname"))
+                        }
                     }
-
-                    Group {
-                        TextField($password, placeholder: Text("Password"))
-                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
-                            .background(Color.gray)
+                    .frame(height: 60, alignment: Alignment.leading)
+                    .border(Color.gray)
+                    .padding(EdgeInsets(top: 8, leading: 8, bottom: 2, trailing: 8))
+									
+                    HStack {
+                        Image(systemName: "flame")
+                            .padding(.leading)
+                            .foregroundColor(Color.gray)
+                        Group {
+                            TextField($password, placeholder: Text("Password"))
+                        }
                     }
+                    .frame(height: 60, alignment: Alignment.leading)
+                    .border(Color.gray)
+                    .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
+									
                 }
                 .frame(width: UIScreen.main.bounds.width - 60, alignment: Alignment.center)
                 .background(Color.white)
-                .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
-
+								.clipShape(RoundedRectangle(cornerRadius: 6))
+							
                 FilledButton(title: "Sign In") {
                     print("SimpleButton")
                 }

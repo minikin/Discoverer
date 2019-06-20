@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct FilledButton: View {
+    @State private var pressed = false
     let title: String
-    var action: () -> Void
+    let action: () -> Void
 
     var body: some View {
         Button(action: {
@@ -22,5 +23,6 @@ struct FilledButton: View {
         }
         .frame(width: 200, height: 60, alignment: Alignment.center)
         .background(Color.blue)
+				.clipShape(RoundedRectangle(cornerRadius: 6))
     }
 }
