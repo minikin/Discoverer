@@ -23,6 +23,6 @@ struct FilledButton: View {
         }
         .frame(width: 200, height: 60, alignment: Alignment.center)
         .background(Color.blue)
-				.clipShape(RoundedRectangle(cornerRadius: 6))
+        .clipShape(RoundedRectangle(cornerRadius: 6))
     }
 }

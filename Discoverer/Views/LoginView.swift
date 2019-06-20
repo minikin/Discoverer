@@ -17,40 +17,22 @@ struct LoginView: View {
             Image("background")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-
             VStack {
                 VStack {
-									
-                    HStack {
-											
-                        Group {
-													Image(systemName: "flame")
-														.padding(.leading)
-														.foregroundColor(Color.gray)
-                            TextField($nickName, placeholder: Text("Nickname"))
-                        }
-                    }
-                    .frame(height: 60, alignment: Alignment.leading)
-                    .border(Color.gray)
-                    .padding(EdgeInsets(top: 8, leading: 8, bottom: 2, trailing: 8))
-									
-                    HStack {
-                        Image(systemName: "flame")
-                            .padding(.leading)
-                            .foregroundColor(Color.gray)
-                        Group {
-                            TextField($password, placeholder: Text("Password"))
-                        }
-                    }
-                    .frame(height: 60, alignment: Alignment.leading)
-                    .border(Color.gray)
-                    .padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
-									
+                    TextInputField(text: $nickName,
+                                   imageNamed: "at",
+                                   placeholderText: "Nickname",
+                                   padding: EdgeInsets(top: 8, leading: 8, bottom: 2, trailing: 8))
+
+                    TextInputField(text: $password,
+                                   imageNamed: "flame",
+                                   placeholderText: "Password",
+                                   padding: EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
                 }
                 .frame(width: UIScreen.main.bounds.width - 60, alignment: Alignment.center)
                 .background(Color.white)
-								.clipShape(RoundedRectangle(cornerRadius: 6))
-							
+                .clipShape(RoundedRectangle(cornerRadius: 6))
+
                 FilledButton(title: "Sign In") {
                     print("SimpleButton")
                 }
