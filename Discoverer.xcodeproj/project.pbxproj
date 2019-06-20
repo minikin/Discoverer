@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7AF34122BBA24500618DFD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7AF34022BBA24500618DFD /* LoginView.swift */; };
 		A1B877E222A95E2E005A8871 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B877E122A95E2E005A8871 /* HomeView.swift */; };
 		A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3122A95AA500622F70 /* AppDelegate.swift */; };
 		A1F63D3422A95AA500622F70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3322A95AA500622F70 /* SceneDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B7AF34022BBA24500618DFD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A1B877E122A95E2E005A8871 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1F63D2E22A95AA500622F70 /* Discoverer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discoverer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F63D3122A95AA500622F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B7AF33F22BB867E00618DFD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		A1B877E322A96029005A8871 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				A1F63D4622A95BA600622F70 /* Models */,
+				8B7AF33F22BB867E00618DFD /* Networking */,
 				A1F63D4822A95BCB00622F70 /* Resources */,
 				A1F63D4722A95BAF00622F70 /* Utils */,
 				A1B877E322A96029005A8871 /* ViewModels */,
@@ -84,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B877E122A95E2E005A8871 /* HomeView.swift */,
+				8B7AF34022BBA24500618DFD /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 			files = (
 				A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */,
 				A1B877E222A95E2E005A8871 /* HomeView.swift in Sources */,
+				8B7AF34122BBA24500618DFD /* LoginView.swift in Sources */,
 				A1F63D3422A95AA500622F70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
