@@ -22,8 +22,8 @@ struct LoginView: View {
                 VStack {
                     Group {
                         TextField($nickName, placeholder: Text("Nickname"))
-                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
                             .background(Color.gray)
+                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
                     }
 
                     Group {
@@ -36,15 +36,9 @@ struct LoginView: View {
                 .background(Color.white)
                 .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
 
-                Button(action: {
-                    print("PRINT")
-                }) {
-                    Text("Log In")
-                        .font(.largeTitle)
-                        .foregroundColor(Color.white)
+                FilledButton(title: "Sign In") {
+                    print("SimpleButton")
                 }
-                .frame(width: 200, height: 60, alignment: Alignment.center)
-                .background(Color.blue)
             }
         }
     }
