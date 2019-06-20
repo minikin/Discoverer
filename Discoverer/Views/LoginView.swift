@@ -15,6 +15,7 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             Image("background")
+                .resizable()
                 .aspectRatio(contentMode: .fill)
 
             VStack {
@@ -31,6 +32,7 @@ struct LoginView: View {
                             .background(Color.gray)
                     }
                 }
+                .frame(width: UIScreen.main.bounds.width - 60, alignment: Alignment.center)
                 .background(Color.white)
                 .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
 
