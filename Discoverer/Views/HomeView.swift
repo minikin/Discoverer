@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Discoverer
 //
 //  Created by Sasha Prokhorenko on 06.06.19.
@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct HomeView : View {
     var body: some View {
-        Text("Hello World")
+        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct HomeView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
 #endif
