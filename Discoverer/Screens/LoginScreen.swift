@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginScreen: View {
     @State private var nickName = ""
     @State private var password = ""
 
@@ -42,9 +42,9 @@ struct LoginView: View {
 }
 
 #if DEBUG
-    struct LoginView_Previews: PreviewProvider {
+    struct LoginScreen_Previews: PreviewProvider {
         static var previews: some View {
-            LoginView()
+            LoginScreen()
         }
     }
 #endif
