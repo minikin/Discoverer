@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8B36BC0B22BBBADD00F4AE32 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B36BC0A22BBBADD00F4AE32 /* FilledButton.swift */; };
 		8B7AF34122BBA24500618DFD /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7AF34022BBA24500618DFD /* LoginScreen.swift */; };
 		8B8486BE22BBCD810048D97A /* TextInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8486BD22BBCD810048D97A /* TextInputField.swift */; };
+		8B8486C222BBDBCC0048D97A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8B8486C122BBDBCC0048D97A /* KeychainAccess */; };
 		A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3122A95AA500622F70 /* AppDelegate.swift */; };
 		A1F63D3422A95AA500622F70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3322A95AA500622F70 /* SceneDelegate.swift */; };
 		A1F63D3822A95AA600622F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F63D3722A95AA600622F70 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8486C222BBDBCC0048D97A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +56,27 @@
 				8B7AF34022BBA24500618DFD /* LoginScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		8B8486C322BBDC3D0048D97A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B7AF33F22BB867E00618DFD /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8B8486C422BBDC4E0048D97A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1F63D4522A95B9800622F70 /* Views */,
+				A1B877E322A96029005A8871 /* ViewModels */,
+				A1F63D4722A95BAF00622F70 /* Utils */,
+				A1F63D4822A95BCB00622F70 /* Resources */,
+				A1F63D4622A95BA600622F70 /* Models */,
+				8B8486BF22BBD73C0048D97A /* Screens */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		A1B877E322A96029005A8871 /* ViewModels */ = {
@@ -82,13 +105,8 @@
 		A1F63D3022A95AA500622F70 /* Discoverer */ = {
 			isa = PBXGroup;
 			children = (
-				A1F63D4622A95BA600622F70 /* Models */,
-				8B7AF33F22BB867E00618DFD /* Networking */,
-				A1F63D4822A95BCB00622F70 /* Resources */,
-				8B8486BF22BBD73C0048D97A /* Screens */,
-				A1F63D4722A95BAF00622F70 /* Utils */,
-				A1B877E322A96029005A8871 /* ViewModels */,
-				A1F63D4522A95B9800622F70 /* Views */,
+				8B8486C422BBDC4E0048D97A /* App */,
+				8B8486C322BBDC3D0048D97A /* Services */,
 			);
 			path = Discoverer;
 			sourceTree = "<group>";
@@ -153,6 +171,9 @@
 			dependencies = (
 			);
 			name = Discoverer;
+			packageProductDependencies = (
+				8B8486C122BBDBCC0048D97A /* KeychainAccess */,
+			);
 			productName = Discoverer;
 			productReference = A1F63D2E22A95AA500622F70 /* Discoverer.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +202,9 @@
 				Base,
 			);
 			mainGroup = A1F63D2522A95AA500622F70;
+			packageReferences = (
+				8B8486C022BBDBCC0048D97A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = A1F63D2F22A95AA500622F70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,9 +373,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "Discoverer/Utils/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Discoverer/App/Utils/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Discoverer/Utils/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Discoverer/App/Utils/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,9 +392,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "Discoverer/Utils/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Discoverer/App/Utils/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Discoverer/Utils/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Discoverer/App/Utils/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B8486C022BBDBCC0048D97A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B8486C122BBDBCC0048D97A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B8486C022BBDBCC0048D97A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1F63D2622A95AA500622F70 /* Project object */;
 }
