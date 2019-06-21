@@ -31,7 +31,7 @@ func buttonPressed() {
     print("buttonPressed")
 }
 
-func filledButton(_ title: String, _ action: @escaping () -> Void) -> some View {
+func filledButton(_ title: String = "", _ action: @escaping () -> Void) -> some View {
     Button(action: {
         action()
     }) {
