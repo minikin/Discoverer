@@ -6,7 +6,12 @@
 //  Copyright © 2019 Sasha Prokhorenko. All rights reserved.
 //
 
+import Foundation
 import SwiftUI
+
+enum NetworkError: Error {
+    case badURL
+}
 
 struct FilledButton: View {
     @State private var pressed = false
@@ -27,13 +32,28 @@ struct FilledButton: View {
     }
 }
 
-func buttonPressed() {
-    print("buttonPressed")
+func fakeNetworkReuest() -> (Result<String, NetworkError>) -> Void {
+    return { result in
+        switch result {
+        case let .success(value):
+            print(value)
+        case let .failure(error):
+            print(error.localizedDescription)
+        }
+    }
 }
 
-func filledButton(_ title: String = "", _ action: @escaping () -> Void) -> some View {
+func filledButton(_ title: String,
+                  _ completionHandler: @escaping (Result<String, NetworkError>) -> Void) -> some View {
     Button(action: {
-        action()
+        let random = Int.random(in: 0 ..< 3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(random)) {
+            if random == 1 {
+                completionHandler(.failure(.badURL))
+            } else {
+                completionHandler(.success("Success!"))
+            }
+        }
     }) {
         Text(title)
             .font(.largeTitle)

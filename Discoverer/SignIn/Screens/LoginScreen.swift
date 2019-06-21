@@ -21,22 +21,8 @@ struct LoginScreen: View {
                 .aspectRatio(contentMode: .fill)
 
             VStack {
-                VStack {
-                    textInputField($nickName,
-                                   placeholderText: "Nickname",
-                                   imageNamed: "at",
-                                   padding: Theme.Padding.nickName)
-
-                    textInputField($nickName,
-                                   placeholderText: "Password",
-                                   imageNamed: "flame",
-                                   padding: Theme.Padding.password)
-                }
-                .frame(width: screenWidth - 60, alignment: Alignment.center)
-                .background(Color.white)
-                .cornerRadius(6, antialiased: true)
-							
-                filledButton("Sign In", buttonPressed)
+                signInForm($nickName, $password)
+                filledButton("Sign In", fakeNetworkReuest())
             }
         }
     }
