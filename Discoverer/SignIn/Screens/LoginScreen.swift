@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+let screenWidth = UIScreen.main.bounds.width
+
 struct LoginScreen: View {
     @State private var nickName = ""
     @State private var password = ""
@@ -19,23 +21,21 @@ struct LoginScreen: View {
                 .aspectRatio(contentMode: .fill)
             VStack {
                 VStack {
-                    TextInputField(text: $nickName,
-                                   imageNamed: "at",
+                    textInputField($nickName,
                                    placeholderText: "Nickname",
-                                   padding: EdgeInsets(top: 8, leading: 8, bottom: 2, trailing: 8))
+                                   imageNamed: "at",
+                                   padding: Theme.Padding.nickName)
 
-                    TextInputField(text: $password,
-                                   imageNamed: "flame",
+                    textInputField($nickName,
                                    placeholderText: "Password",
-                                   padding: EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
+                                   imageNamed: "flame",
+                                   padding: Theme.Padding.password)
                 }
-                .frame(width: UIScreen.main.bounds.width - 60, alignment: Alignment.center)
+                .frame(width: screenWidth - 60, alignment: Alignment.center)
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
 
-                FilledButton(title: "Sign In") {
-                    print("SimpleButton")
-                }
+                filledButton("Sign In", buttonPressed)
             }
         }
     }

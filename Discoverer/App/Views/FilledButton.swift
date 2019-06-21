@@ -26,3 +26,20 @@ struct FilledButton: View {
         .clipShape(RoundedRectangle(cornerRadius: 6))
     }
 }
+
+func buttonPressed() {
+    print("buttonPressed")
+}
+
+func filledButton(_ title: String, _ action: @escaping () -> Void) -> some View {
+    Button(action: {
+        action()
+    }) {
+        Text(title)
+            .font(.largeTitle)
+            .foregroundColor(Color.white)
+    }
+    .frame(width: 200, height: 60, alignment: Alignment.center)
+    .background(Color.blue)
+    .clipShape(RoundedRectangle(cornerRadius: 6))
+}

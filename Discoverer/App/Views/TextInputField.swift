@@ -24,8 +24,26 @@ struct TextInputField: View {
             }
         }
         .frame(height: 60, alignment: Alignment.leading)
-				.border(Color.gray, width: 1)
+        .border(Color.gray, width: 1)
         .clipShape(RoundedRectangle(cornerRadius: 6))
         .padding(padding)
     }
+}
+
+func textInputField(_ text: Binding<String>,
+                    placeholderText: String = "",
+                    imageNamed: String,
+                    padding: EdgeInsets) -> some View {
+    HStack {
+        Group {
+            Image(systemName: imageNamed)
+                .padding(.leading)
+                .foregroundColor(Color.gray)
+            TextField(text, placeholder: Text(placeholderText))
+        }
+    }
+    .frame(height: 60, alignment: Alignment.leading)
+    .border(Color.gray, width: 1)
+    .clipShape(RoundedRectangle(cornerRadius: 6))
+    .padding(padding)
 }
