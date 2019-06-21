@@ -41,5 +41,5 @@ func filledButton(_ title: String = "", _ action: @escaping () -> Void) -> some 
     }
     .frame(width: 200, height: 60, alignment: Alignment.center)
     .background(Color.blue)
-    .clipShape(RoundedRectangle(cornerRadius: 6))
+    .cornerRadius(8, antialiased: true)
 }

@@ -19,6 +19,7 @@ struct LoginScreen: View {
             Image("background")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+
             VStack {
                 VStack {
                     textInputField($nickName,
@@ -33,8 +34,8 @@ struct LoginScreen: View {
                 }
                 .frame(width: screenWidth - 60, alignment: Alignment.center)
                 .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 6))
-
+                .cornerRadius(6, antialiased: true)
+							
                 filledButton("Sign In", buttonPressed)
             }
         }

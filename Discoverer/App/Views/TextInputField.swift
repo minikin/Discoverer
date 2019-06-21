@@ -44,6 +44,6 @@ func textInputField(_ text: Binding<String>,
     }
     .frame(height: 60, alignment: Alignment.leading)
     .border(Color.gray, width: 1)
-    .clipShape(RoundedRectangle(cornerRadius: 6))
+    .cornerRadius(2, antialiased: true)
     .padding(padding)
 }
