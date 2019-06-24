@@ -6,14 +6,15 @@
 //  Copyright © 2019 Sasha Prokhorenko. All rights reserved.
 //
 
+import Combine
 import SwiftUI
-
-let screenWidth = UIScreen.main.bounds.width
 
 struct LoginScreen: View {
     @State private var nickName = ""
     @State private var password = ""
     @State private var pressed = false
+
+    // @ObjectBinding var resource = Resource(endpoint: posts)
 
     var body: some View {
         ZStack {
@@ -26,7 +27,6 @@ struct LoginScreen: View {
                 FilledButton(title: "Sign In") {
                     print("FilledButton")
                 }
-                // filledButton("Sign In", fakeNetworkReuest())
             }
         }
     }

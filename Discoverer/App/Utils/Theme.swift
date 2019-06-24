@@ -9,6 +9,8 @@
 import Foundation
 import SwiftUI
 
+let screenWidth = UIScreen.main.bounds.width
+
 struct Theme {
     struct Padding {
         static let nickName = EdgeInsets(top: 8, leading: 8, bottom: 2, trailing: 8)

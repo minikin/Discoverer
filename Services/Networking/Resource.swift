@@ -14,7 +14,6 @@ final class Resource<A>: BindableObject {
     let endpoint: Endpoint<A>
     var value: A? {
         didSet {
-            sleep(2)
             DispatchQueue.main.async {
                 self.didChange.send(self.value)
             }

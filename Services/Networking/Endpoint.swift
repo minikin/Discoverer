@@ -46,15 +46,17 @@ struct Endpoint<A> {
         if let a = accept {
             request.setValue(a.rawValue, forHTTPHeaderField: "Accept")
         }
+
         if let ct = contentType {
             request.setValue(ct.rawValue, forHTTPHeaderField: "Content-Type")
         }
+
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
+
         request.timeoutInterval = timeOutInterval
         request.httpMethod = method.string
-
         // body *needs* to be the last property that we set, because of this bug: https://bugs.swift.org/browse/SR-6687
         request.httpBody = body
 
@@ -63,7 +65,8 @@ struct Endpoint<A> {
     }
 
     init(request: URLRequest,
-         expectedStatusCode: @escaping (Int) -> Bool, parse: @escaping (Data?) -> Result<A, Error>) {
+         expectedStatusCode: @escaping (Int) -> Bool,
+         parse: @escaping (Data?) -> Result<A, Error>) {
         self.request = request
         self.expectedStatusCode = expectedStatusCode
         self.parse = parse
@@ -93,7 +96,8 @@ extension Endpoint where A == () {
          url: URL,
          accept: ContentType? = nil,
          headers: [String: String] = [:],
-         expectedStatusCode: @escaping (Int) -> Bool = expected200to300, query: [String: String] = [:]) {
+         expectedStatusCode: @escaping (Int) -> Bool = expected200to300,
+         query: [String: String] = [:]) {
         self.init(method,
                   url: url,
                   accept: accept,
