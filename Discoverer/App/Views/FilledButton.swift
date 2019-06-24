@@ -20,15 +20,26 @@ struct FilledButton: View {
 
     var body: some View {
         Button(action: {
+						self.pressed.toggle()
             self.action()
+						DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+							self.pressed.toggle()
+						}
         }) {
-            Text(title)
-                .font(.largeTitle)
-                .foregroundColor(Color.white)
+					if !(pressed) {
+						Text(title)
+							.font(.largeTitle)
+							.foregroundColor(Color.white)
+					} else {
+						Text(title)
+							.font(.largeTitle)
+							.foregroundColor(Color.gray)
+					}
         }
         .frame(width: 200, height: 60, alignment: Alignment.center)
-        .background(Color.blue)
-        .clipShape(RoundedRectangle(cornerRadius: 6))
+        .background(pressed ? Color.gray : Color.blue)
+        .cornerRadius(6, antialiased: true)
+        .disabled(pressed)
     }
 }
 

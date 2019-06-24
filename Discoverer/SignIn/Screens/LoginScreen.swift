@@ -13,6 +13,7 @@ let screenWidth = UIScreen.main.bounds.width
 struct LoginScreen: View {
     @State private var nickName = ""
     @State private var password = ""
+    @State private var pressed = false
 
     var body: some View {
         ZStack {
@@ -22,7 +23,10 @@ struct LoginScreen: View {
 
             VStack {
                 signInForm($nickName, $password)
-                filledButton("Sign In", fakeNetworkReuest())
+                FilledButton(title: "Sign In") {
+									print("FilledButton")
+								}
+                // filledButton("Sign In", fakeNetworkReuest())
             }
         }
     }
