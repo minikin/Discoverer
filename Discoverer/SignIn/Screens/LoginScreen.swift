@@ -24,8 +24,8 @@ struct LoginScreen: View {
             VStack {
                 signInForm($nickName, $password)
                 FilledButton(title: "Sign In") {
-									print("FilledButton")
-								}
+                    print("FilledButton")
+                }
                 // filledButton("Sign In", fakeNetworkReuest())
             }
         }

@@ -1,5 +1,5 @@
 //
-//  ContentType.swift
+//  Networking+Utils.swift
 //  Discoverer
 //
 //  Created by Developer on 24.06.19.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-enum ContentType: String {
-    case json = "application/json"
-    case xml = "application/xml"
+func expected200to300(_ code: Int) -> Bool {
+    return code >= 200 && code < 300
 }
