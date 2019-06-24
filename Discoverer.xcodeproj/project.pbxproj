@@ -10,6 +10,7 @@
 		8B1D499722BCDED200A72A9C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D499622BCDED200A72A9C /* Theme.swift */; };
 		8B1D499C22BCFDBD00A72A9C /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D499B22BCFDBD00A72A9C /* SignInForm.swift */; };
 		8B36BC0B22BBBADD00F4AE32 /* FilledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B36BC0A22BBBADD00F4AE32 /* FilledButton.swift */; };
+		8B45468622C0F481002D83F4 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45468522C0F481002D83F4 /* ContentType.swift */; };
 		8B7AF34122BBA24500618DFD /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7AF34022BBA24500618DFD /* LoginScreen.swift */; };
 		8B8486BE22BBCD810048D97A /* TextInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8486BD22BBCD810048D97A /* TextInputField.swift */; };
 		8B8486C222BBDBCC0048D97A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8B8486C122BBDBCC0048D97A /* KeychainAccess */; };
@@ -24,6 +25,7 @@
 		8B1D499622BCDED200A72A9C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8B1D499B22BCFDBD00A72A9C /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		8B36BC0A22BBBADD00F4AE32 /* FilledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButton.swift; sourceTree = "<group>"; };
+		8B45468522C0F481002D83F4 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
 		8B7AF34022BBA24500618DFD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		8B8486BD22BBCD810048D97A /* TextInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputField.swift; sourceTree = "<group>"; };
 		A1F63D2E22A95AA500622F70 /* Discoverer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discoverer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +52,7 @@
 		8B7AF33F22BB867E00618DFD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8B45468522C0F481002D83F4 /* ContentType.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */,
+				8B45468622C0F481002D83F4 /* ContentType.swift in Sources */,
 				8B7AF34122BBA24500618DFD /* LoginScreen.swift in Sources */,
 				A1F63D3422A95AA500622F70 /* SceneDelegate.swift in Sources */,
 				8B1D499722BCDED200A72A9C /* Theme.swift in Sources */,
