@@ -6,7 +6,6 @@
 //  Copyright © 2019 Sasha Prokhorenko. All rights reserved.
 //
 
-import Combine
 import SwiftUI
 
 struct LoginScreen: View {
