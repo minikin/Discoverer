@@ -8,6 +8,17 @@
 
 import Foundation
 
+struct User: Codable {
+    var name: String
+    var location: String?
+}
+
+extension User {
+    static func userInfo(login: String) -> Endpoint<User> {
+        return Endpoint(json: .get, url: URL(string: "https://api.github.com/users/\(login)")!)
+    }
+}
+
 // struct Post: Codable {
 //	let userId: Int
 //	let title: String

@@ -13,7 +13,7 @@ struct LoginScreen: View {
     @State private var password = ""
     @State private var pressed = false
 
-    // @ObjectBinding var resource = Resource(endpoint: posts)
+    @ObjectBinding var user = Resource(endpoint: User.userInfo(login: "minikin"))
 
     var body: some View {
         ZStack {
@@ -22,9 +22,22 @@ struct LoginScreen: View {
                 .aspectRatio(contentMode: .fill)
 
             VStack {
-                signInForm($nickName, $password)
-                FilledButton(title: "Sign In") {
-                    print("FilledButton")
+                Group {
+                    if user.value == nil {
+                        Text("Loading...")
+                    } else {
+                        VStack {
+                            Text(user.value!.name)
+                                //.foregroundColor(Color.white)
+																.bold()
+                            Text(user.value!.location ?? "")
+                        }
+                    }
+                }.frame(width: 400, height: 60, alignment: Alignment.center)
+                //signInForm($nickName, $password)
+                FilledButton(title: "Switch User") {
+									self.user.endpoint = User.userInfo(login: "dru")
+									self.user.reload()
                 }
             }
         }

@@ -22,9 +22,10 @@ struct FilledButton: View {
         Button(action: {
             self.pressed.toggle()
             self.action()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.pressed.toggle()
-            }
+						self.pressed.toggle()
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                self.pressed.toggle()
+//            }
         }) {
             if !pressed {
                 Text(title)
