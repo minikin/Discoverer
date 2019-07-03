@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-func signInForm(_ nickName: Binding<String>, _ password: Binding<String>) -> some View {
+func signInForm(_ nickName: Binding<String>,
+								_ password: Binding<String>) -> some View {
     VStack {
         textInputField(nickName,
                        placeholderText: "Nickname",
