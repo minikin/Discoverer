@@ -20,6 +20,7 @@
 		8B7AF34122BBA24500618DFD /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7AF34022BBA24500618DFD /* LoginScreen.swift */; };
 		8B8486BE22BBCD810048D97A /* TextInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8486BD22BBCD810048D97A /* TextInputField.swift */; };
 		8B8486C222BBDBCC0048D97A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8B8486C122BBDBCC0048D97A /* KeychainAccess */; };
+		8BE2444022CCA0C200AFCC31 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE2443F22CCA0C200AFCC31 /* LazyView.swift */; };
 		A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3122A95AA500622F70 /* AppDelegate.swift */; };
 		A1F63D3422A95AA500622F70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F63D3322A95AA500622F70 /* SceneDelegate.swift */; };
 		A1F63D3822A95AA600622F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F63D3722A95AA600622F70 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		8B45469122C102E7002D83F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8B7AF34022BBA24500618DFD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		8B8486BD22BBCD810048D97A /* TextInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputField.swift; sourceTree = "<group>"; };
+		8BE2443F22CCA0C200AFCC31 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		A1F63D2E22A95AA500622F70 /* Discoverer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discoverer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F63D3122A95AA500622F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1F63D3322A95AA500622F70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		8B8486C322BBDC3D0048D97A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8BE2443E22CCA0AC00AFCC31 /* Models */,
 				A1F63D4622A95BA600622F70 /* ResponseModels */,
 				8B7AF33F22BB867E00618DFD /* Networking */,
 			);
@@ -108,6 +111,14 @@
 				8B8486BF22BBD73C0048D97A /* Screens */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8BE2443E22CCA0AC00AFCC31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BE2443F22CCA0C200AFCC31 /* LazyView.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A1B877E322A96029005A8871 /* ViewModels */ = {
@@ -270,6 +281,7 @@
 				8B45469022C0F877002D83F4 /* Resource.swift in Sources */,
 				8B45468E22C0F799002D83F4 /* URLSession+Extensions.swift in Sources */,
 				A1F63D3222A95AA500622F70 /* AppDelegate.swift in Sources */,
+				8BE2444022CCA0C200AFCC31 /* LazyView.swift in Sources */,
 				8B45468622C0F481002D83F4 /* ContentType.swift in Sources */,
 				8B45468C22C0F5FC002D83F4 /* Networking+Utils.swift in Sources */,
 				8B45468822C0F55D002D83F4 /* NetworkingErrors.swift in Sources */,
