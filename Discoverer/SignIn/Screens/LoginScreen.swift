@@ -27,9 +27,7 @@ struct LoginScreen: View {
                         Text("Loading...")
                     } else {
                         VStack {
-                            Text(user.value!.name)
-                                //.foregroundColor(Color.white)
-																.bold()
+                            Text(user.value!.name).bold()
                             Text(user.value!.location ?? "")
                         }
                     }
